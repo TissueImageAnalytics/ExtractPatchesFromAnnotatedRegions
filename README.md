@@ -14,7 +14,7 @@ Please follow these steps to extract patches -
 
 3. From command line (after going to the folder containing main.py file of this repository), issue this command =>
     
-   python main.py --wsi-folder [Folder where all WSI images are kept] --output-folder [Folder where you want to store annotated images] --patch-size [Patch Size] --level [Select the suitable level(as per DeepZoomGenerator) to set resolution] --labels [Give comma separated labels for annotations you want to be extracted, give each label as labelname:labelid, example - dcis:1,invasive:2,lcis:3]
+   python main.py --wsi-folder [Folder where all WSI images are kept] --output-folder [Folder where you want to store annotated images] --patch-size [Patch Size] --magnification [Select the suitable magnification to set resolution, default is 10X] --labels [Give comma separated labels for annotations you want to be extracted, give each label as labelname:labelid, example - dcis:1,invasive:2,lcis:3]
    
 4. The patches from annotated regions will start forming in the output folder you give. The format of the filename is as follows - 
    ([slide number] _ [x-coordinate of the mapped image to lower resolution] _ [y-coordinate] _ [annotation-label]).png. You can ignore the x and y coordinates as they are put in the name just to make image names unique.
